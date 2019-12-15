@@ -2,18 +2,27 @@
 title: "Origin and Destination Volume"
 date: 2019-12-15
 published: true
-tags: [dataviz, altair, hvplot, holoviews]
 excerpt: "Embedding interactive charts on static pages using Jekyll."
 folium-loader:
-  folium-chart-1: ["charts/ODvolume.html", "400"]
+  folium-OD: ["charts/ODvolume.html", "400"]
+hv-loader:
+  holoviews-Departures-Dest-State: "charts/Departure_DestState.html"
+  holoviews-Departures-Origin-State: "charts/Departure_OriginState.html"
 toc: true
 toc_sticky: true
 ---
 
-This post will show examples of embedding interactive maps produced using [Folium](https://github.com/python-visualization/folium).
+## Departures by Destination State
+
+<div id="holoviews-Departures-Dest-State"></div>
+
+## Departures by Origin State
+
+<div id="holoviews-Departures-Origin-State"></div>
 
 ## OD Volumes
 
 Volumes map
 
-<div id="folium-chart-1"></div>
+<div id="folium-OD"></div>
+

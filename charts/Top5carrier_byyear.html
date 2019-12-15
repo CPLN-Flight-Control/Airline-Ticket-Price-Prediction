@@ -1,0 +1,271 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>hvPlot Plot</title>
+      
+      
+        
+          
+        <style>
+            .widget-box {
+                	min-height: 20px;
+                	background-color: #f5f5f5;
+                	border: 1px solid #e3e3e3 !important;
+                	border-radius: 4px;
+                	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+                	box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+                	overflow-x: hidden;
+                	overflow-y: hidden;
+                }
+
+                .scrollable {
+                  overflow: scroll;
+                }
+
+                progress {
+                	appearance: none;
+                	-moz-appearance: none;
+                	-webkit-appearance: none;
+
+                	border: none;
+                	height: 20px;
+                	background-color: whiteSmoke;
+                	border-radius: 3px;
+                	box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+                	color: royalblue;
+                	position: relative;
+                	margin: 0 0 1.5em;
+                }
+
+                progress[value]::-webkit-progress-bar {
+                	background-color: whiteSmoke;
+                	border-radius: 3px;
+                	box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+                }
+
+                progress[value]::-webkit-progress-value {
+                	position: relative;
+
+                	background-size: 35px 20px, 100% 100%, 100% 100%;
+                	border-radius:3px;
+                }
+
+                progress.active:not([value])::before {
+                	background-position: 10%;
+                	animation-name: stripes;
+                	animation-duration: 3s;
+                	animation-timing-function: linear;
+                	animation-iteration-count: infinite;
+                }
+
+                progress[value]::-moz-progress-bar {
+                	background-size: 35px 20px, 100% 100%, 100% 100%;
+                	border-radius:3px;
+                }
+
+                progress:not([value])::-moz-progress-bar {
+                	border-radius:3px;
+                	background:
+                	linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.2) 33%, rgba(0, 0, 0, 0.2) 66%, transparent 66%) left/2.5em 1.5em;
+
+                }
+
+                progress.active:not([value])::-moz-progress-bar {
+                	background-position: 10%;
+                	animation-name: stripes;
+                	animation-duration: 3s;
+                	animation-timing-function: linear;
+                	animation-iteration-count: infinite;
+                }
+
+                progress.active:not([value])::-webkit-progress-bar {
+                	background-position: 10%;
+                	animation-name: stripes;
+                	animation-duration: 3s;
+                	animation-timing-function: linear;
+                	animation-iteration-count: infinite;
+                }
+
+                progress.primary[value]::-webkit-progress-value { background-color: #007bff; }
+                progress.primary:not([value])::before { background-color: #007bff; }
+                progress.primary:not([value])::-webkit-progress-bar { background-color: #007bff; }
+                progress.primary::-moz-progress-bar { background-color: #007bff; }
+
+                progress.secondary[value]::-webkit-progress-value { background-color: #6c757d; }
+                progress.secondary:not([value])::before { background-color: #6c757d; }
+                progress.secondary:not([value])::-webkit-progress-bar { background-color: #6c757d; }
+                progress.secondary::-moz-progress-bar { background-color: #6c757d; }
+
+                progress.success[value]::-webkit-progress-value { background-color: #28a745; }
+                progress.success:not([value])::before { background-color: #28a745; }
+                progress.success:not([value])::-webkit-progress-bar { background-color: #28a745; }
+                progress.success::-moz-progress-bar { background-color: #28a745; }
+
+                progress.danger[value]::-webkit-progress-value { background-color: #dc3545; }
+                progress.danger:not([value])::before { background-color: #dc3545; }
+                progress.danger:not([value])::-webkit-progress-bar { background-color: #dc3545; }
+                progress.danger::-moz-progress-bar { background-color: #dc3545; }
+
+                progress.warning[value]::-webkit-progress-value { background-color: #ffc107; }
+                progress.warning:not([value])::before { background-color: #ffc107; }
+                progress.warning:not([value])::-webkit-progress-bar { background-color: #ffc107; }
+                progress.warning::-moz-progress-bar { background-color: #ffc107; }
+
+                progress.info[value]::-webkit-progress-value { background-color: #17a2b8; }
+                progress.info:not([value])::before { background-color: #17a2b8; }
+                progress.info:not([value])::-webkit-progress-bar { background-color: #17a2b8; }
+                progress.info::-moz-progress-bar { background-color: #17a2b8; }
+
+                progress.light[value]::-webkit-progress-value { background-color: #f8f9fa; }
+                progress.light:not([value])::before { background-color: #f8f9fa; }
+                progress.light:not([value])::-webkit-progress-bar { background-color: #f8f9fa; }
+                progress.light::-moz-progress-bar { background-color: #f8f9fa; }
+
+                progress.dark[value]::-webkit-progress-value { background-color: #343a40; }
+                progress.dark:not([value])::-webkit-progress-bar { background-color: #343a40; }
+                progress.dark:not([value])::before { background-color: #343a40; }
+                progress.dark::-moz-progress-bar { background-color: #343a40; }
+
+                progress:not([value])::-webkit-progress-bar {
+                	border-radius: 3px;
+                	background:
+                	linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.2) 33%, rgba(0, 0, 0, 0.2) 66%, transparent 66%) left/2.5em 1.5em;
+                }
+                progress:not([value])::before {
+                	content:" ";
+                	position:absolute;
+                	height: 20px;
+                	top:0;
+                	left:0;
+                	right:0;
+                	bottom:0;
+                	border-radius: 3px;
+                	background:
+                	linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.2) 33%, rgba(0, 0, 0, 0.2) 66%, transparent 66%) left/2.5em 1.5em;
+                }
+
+                @keyframes stripes {
+                  from {background-position: 0%}
+                  to {background-position: 100%}
+                }
+        </style>
+        <style>
+            table.panel-df {
+                    margin-left: auto;
+                    margin-right: auto;
+                    border: none;
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    color: black;
+                    font-size: 12px;
+                    table-layout: fixed;
+                }
+
+                .panel-df tr, th, td {
+                    text-align: right;
+                    vertical-align: middle;
+                    padding: 0.5em 0.5em !important;
+                    line-height: normal;
+                    white-space: normal;
+                    max-width: none;
+                    border: none;
+                }
+
+                .panel-df tbody {
+                    display: table-row-group;
+                    vertical-align: middle;
+                    border-color: inherit;
+                }
+
+                .panel-df tbody tr:nth-child(odd) {
+                    background: #f5f5f5;
+                }
+
+                .panel-df thead {
+                    border-bottom: 1px solid black;
+                    vertical-align: bottom;
+                }
+
+                .panel-df tr:hover {
+                    background: lightblue !important;
+                    cursor: pointer;
+                }
+
+        </style>
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.4.0.min.js"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="45d786d2-ab81-4361-9bbf-af2d2ebceba6" data-root-id="2585"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="3020">
+          {"e4097a3c-9d96-4731-926b-d3d54bb7025a":{"roots":{"references":[{"attributes":{"source":{"id":"2653","type":"ColumnDataSource"}},"id":"2660","type":"CDSView"},{"attributes":{"line_alpha":0.1,"line_color":"#09686C","line_width":2,"x":{"field":"Year"},"y":{"field":"DEPARTURES_PERFORMED"}},"id":"2676","type":"Line"},{"attributes":{"callback":null,"renderers":[{"id":"2626","type":"GlyphRenderer"},{"id":"2642","type":"GlyphRenderer"},{"id":"2659","type":"GlyphRenderer"},{"id":"2678","type":"GlyphRenderer"},{"id":"2699","type":"GlyphRenderer"}],"tags":["hv_created"],"tooltips":[["Name","@{Name}"],["Year","@{Year}"],["DEPARTURES_PERFORMED","@{DEPARTURES_PERFORMED}"]]},"id":"2580","type":"HoverTool"},{"attributes":{"line_color":"#1CBCC3","line_width":2,"x":{"field":"Year"},"y":{"field":"DEPARTURES_PERFORMED"}},"id":"2639","type":"Line"},{"attributes":{},"id":"2714","type":"UnionRenderers"},{"attributes":{"data_source":{"id":"2653","type":"ColumnDataSource"},"glyph":{"id":"2656","type":"Line"},"hover_glyph":null,"muted_glyph":{"id":"2658","type":"Line"},"nonselection_glyph":{"id":"2657","type":"Line"},"selection_glyph":null,"view":{"id":"2660","type":"CDSView"}},"id":"2659","type":"GlyphRenderer"},{"attributes":{"line_alpha":0.2,"line_color":"#09686C","line_width":2,"x":{"field":"Year"},"y":{"field":"DEPARTURES_PERFORMED"}},"id":"2677","type":"Line"},{"attributes":{"axis_label":"Year","bounds":"auto","formatter":{"id":"2617","type":"BasicTickFormatter"},"major_label_orientation":1.5707963267948966,"ticker":{"id":"2595","type":"BasicTicker"}},"id":"2594","type":"LinearAxis"},{"attributes":{},"id":"2670","type":"UnionRenderers"},{"attributes":{"data_source":{"id":"2620","type":"ColumnDataSource"},"glyph":{"id":"2623","type":"Line"},"hover_glyph":null,"muted_glyph":{"id":"2625","type":"Line"},"nonselection_glyph":{"id":"2624","type":"Line"},"selection_glyph":null,"view":{"id":"2627","type":"CDSView"}},"id":"2626","type":"GlyphRenderer"},{"attributes":{"axis_label":"","bounds":"auto","formatter":{"id":"2619","type":"BasicTickFormatter"},"major_label_orientation":"horizontal","ticker":{"id":"2600","type":"BasicTicker"}},"id":"2599","type":"LinearAxis"},{"attributes":{},"id":"2691","type":"UnionRenderers"},{"attributes":{"line_color":"lawngreen","line_width":2,"x":{"field":"Year"},"y":{"field":"DEPARTURES_PERFORMED"}},"id":"2623","type":"Line"},{"attributes":{"label":{"value":"Delta Air Lines Inc."},"renderers":[{"id":"2659","type":"GlyphRenderer"}]},"id":"2671","type":"LegendItem"},{"attributes":{"source":{"id":"2620","type":"ColumnDataSource"}},"id":"2627","type":"CDSView"},{"attributes":{},"id":"2600","type":"BasicTicker"},{"attributes":{},"id":"2592","type":"LinearScale"},{"attributes":{"click_policy":"mute","items":[{"id":"2635","type":"LegendItem"},{"id":"2652","type":"LegendItem"},{"id":"2671","type":"LegendItem"},{"id":"2692","type":"LegendItem"},{"id":"2715","type":"LegendItem"}],"location":[0,0]},"id":"2634","type":"Legend"},{"attributes":{"align":null,"below":[{"id":"2594","type":"LinearAxis"}],"center":[{"id":"2598","type":"Grid"},{"id":"2603","type":"Grid"},{"id":"2634","type":"Legend"}],"left":[{"id":"2599","type":"LinearAxis"}],"margin":null,"min_border_bottom":10,"min_border_left":10,"min_border_right":10,"min_border_top":10,"plot_height":300,"plot_width":700,"renderers":[{"id":"2626","type":"GlyphRenderer"},{"id":"2642","type":"GlyphRenderer"},{"id":"2659","type":"GlyphRenderer"},{"id":"2678","type":"GlyphRenderer"},{"id":"2699","type":"GlyphRenderer"}],"right":[{"id":"2634","type":"Legend"}],"sizing_mode":"fixed","title":{"id":"2586","type":"Title"},"toolbar":{"id":"2609","type":"Toolbar"},"x_range":{"id":"2578","type":"Range1d"},"x_scale":{"id":"2590","type":"LinearScale"},"y_range":{"id":"2579","type":"Range1d"},"y_scale":{"id":"2592","type":"LinearScale"}},"id":"2585","subtype":"Figure","type":"Plot"},{"attributes":{"label":{"value":"Alaska Airlines Inc."},"renderers":[{"id":"2626","type":"GlyphRenderer"}]},"id":"2635","type":"LegendItem"},{"attributes":{},"id":"2651","type":"UnionRenderers"},{"attributes":{"text":"DEPARTURES_PERFORMED","text_color":{"value":"black"},"text_font_size":{"value":"12pt"}},"id":"2586","type":"Title"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"2633","type":"BoxAnnotation"},{"attributes":{},"id":"2654","type":"Selection"},{"attributes":{"label":{"value":"United Air Lines Inc."},"renderers":[{"id":"2699","type":"GlyphRenderer"}]},"id":"2715","type":"LegendItem"},{"attributes":{},"id":"2590","type":"LinearScale"},{"attributes":{"line_alpha":0.1,"line_color":"lawngreen","line_width":2,"x":{"field":"Year"},"y":{"field":"DEPARTURES_PERFORMED"}},"id":"2624","type":"Line"},{"attributes":{},"id":"2637","type":"Selection"},{"attributes":{"callback":null,"end":20416666.0,"reset_end":20416666.0,"reset_start":1733981.0,"start":1733981.0,"tags":[[["DEPARTURES_PERFORMED","DEPARTURES_PERFORMED",null]]]},"id":"2579","type":"Range1d"},{"attributes":{},"id":"2606","type":"WheelZoomTool"},{"attributes":{"data_source":{"id":"2672","type":"ColumnDataSource"},"glyph":{"id":"2675","type":"Line"},"hover_glyph":null,"muted_glyph":{"id":"2677","type":"Line"},"nonselection_glyph":{"id":"2676","type":"Line"},"selection_glyph":null,"view":{"id":"2679","type":"CDSView"}},"id":"2678","type":"GlyphRenderer"},{"attributes":{"data_source":{"id":"2636","type":"ColumnDataSource"},"glyph":{"id":"2639","type":"Line"},"hover_glyph":null,"muted_glyph":{"id":"2641","type":"Line"},"nonselection_glyph":{"id":"2640","type":"Line"},"selection_glyph":null,"view":{"id":"2643","type":"CDSView"}},"id":"2642","type":"GlyphRenderer"},{"attributes":{"line_color":"#8860D0","line_width":2,"x":{"field":"Year"},"y":{"field":"DEPARTURES_PERFORMED"}},"id":"2696","type":"Line"},{"attributes":{"data_source":{"id":"2693","type":"ColumnDataSource"},"glyph":{"id":"2696","type":"Line"},"hover_glyph":null,"muted_glyph":{"id":"2698","type":"Line"},"nonselection_glyph":{"id":"2697","type":"Line"},"selection_glyph":null,"view":{"id":"2700","type":"CDSView"}},"id":"2699","type":"GlyphRenderer"},{"attributes":{"line_alpha":0.1,"line_color":"#1CBCC3","line_width":2,"x":{"field":"Year"},"y":{"field":"DEPARTURES_PERFORMED"}},"id":"2640","type":"Line"},{"attributes":{"line_color":"#09686C","line_width":2,"x":{"field":"Year"},"y":{"field":"DEPARTURES_PERFORMED"}},"id":"2675","type":"Line"},{"attributes":{"callback":null,"data":{"DEPARTURES_PERFORMED":{"__ndarray__":"AAAAAF11OkEAAAAAB7A9QQAAAACd2TtBAAAAAGO7P0EAAACAQ/BCQQAAAIDktkVBAAAAgPYPS0EAAAAArn9NQQAAAEBrolhB","dtype":"float64","shape":[9]},"Name":["Alaska Airlines Inc.","Alaska Airlines Inc.","Alaska Airlines Inc.","Alaska Airlines Inc.","Alaska Airlines Inc.","Alaska Airlines Inc.","Alaska Airlines Inc.","Alaska Airlines Inc.","Alaska Airlines Inc."],"Year":[2010,2011,2012,2013,2014,2015,2016,2017,2018]},"selected":{"id":"2621","type":"Selection"},"selection_policy":{"id":"2651","type":"UnionRenderers"}},"id":"2620","type":"ColumnDataSource"},{"attributes":{"callback":null,"data":{"DEPARTURES_PERFORMED":{"__ndarray__":"AAAAwAjdYUEAAABgTwdmQQAAACALt2VBAAAAYHfsZUEAAADg6VBnQQAAAADfPm1BAAAA0BA2cEEAAAAgxfVuQQAAAFAGsHBB","dtype":"float64","shape":[9]},"Name":["Southwest Airlines Co.","Southwest Airlines Co.","Southwest Airlines Co.","Southwest Airlines Co.","Southwest Airlines Co.","Southwest Airlines Co.","Southwest Airlines Co.","Southwest Airlines Co.","Southwest Airlines Co."],"Year":[2010,2011,2012,2013,2014,2015,2016,2017,2018]},"selected":{"id":"2673","type":"Selection"},"selection_policy":{"id":"2714","type":"UnionRenderers"}},"id":"2672","type":"ColumnDataSource"},{"attributes":{"line_alpha":0.2,"line_color":"#1CBCC3","line_width":2,"x":{"field":"Year"},"y":{"field":"DEPARTURES_PERFORMED"}},"id":"2641","type":"Line"},{"attributes":{},"id":"2621","type":"Selection"},{"attributes":{},"id":"2617","type":"BasicTickFormatter"},{"attributes":{"callback":null,"end":2018.0,"reset_end":2018.0,"reset_start":2010.0,"start":2010.0,"tags":[[["Year","Year",null]]]},"id":"2578","type":"Range1d"},{"attributes":{"line_alpha":0.2,"line_color":"lawngreen","line_width":2,"x":{"field":"Year"},"y":{"field":"DEPARTURES_PERFORMED"}},"id":"2625","type":"Line"},{"attributes":{"line_alpha":0.2,"line_color":"#8860D0","line_width":2,"x":{"field":"Year"},"y":{"field":"DEPARTURES_PERFORMED"}},"id":"2698","type":"Line"},{"attributes":{},"id":"2605","type":"PanTool"},{"attributes":{"source":{"id":"2636","type":"ColumnDataSource"}},"id":"2643","type":"CDSView"},{"attributes":{"dimension":1,"grid_line_color":null,"ticker":{"id":"2600","type":"BasicTicker"}},"id":"2603","type":"Grid"},{"attributes":{},"id":"2608","type":"ResetTool"},{"attributes":{"source":{"id":"2693","type":"ColumnDataSource"}},"id":"2700","type":"CDSView"},{"attributes":{"label":{"value":"Southwest Airlines Co."},"renderers":[{"id":"2678","type":"GlyphRenderer"}]},"id":"2692","type":"LegendItem"},{"attributes":{"label":{"value":"American Airlines Inc."},"renderers":[{"id":"2642","type":"GlyphRenderer"}]},"id":"2652","type":"LegendItem"},{"attributes":{"callback":null,"data":{"DEPARTURES_PERFORMED":{"__ndarray__":"AAAAYElyY0EAAACAcTRkQQAAAEBVYWRBAAAA4IcOZEEAAAAgjRlnQQAAAACIeHBBAAAAoIl4c0EAAABgNvBwQQAAALA183BB","dtype":"float64","shape":[9]},"Name":["American Airlines Inc.","American Airlines Inc.","American Airlines Inc.","American Airlines Inc.","American Airlines Inc.","American Airlines Inc.","American Airlines Inc.","American Airlines Inc.","American Airlines Inc."],"Year":[2010,2011,2012,2013,2014,2015,2016,2017,2018]},"selected":{"id":"2637","type":"Selection"},"selection_policy":{"id":"2670","type":"UnionRenderers"}},"id":"2636","type":"ColumnDataSource"},{"attributes":{"line_alpha":0.1,"line_color":"#8860D0","line_width":2,"x":{"field":"Year"},"y":{"field":"DEPARTURES_PERFORMED"}},"id":"2697","type":"Line"},{"attributes":{},"id":"2673","type":"Selection"},{"attributes":{"callback":null,"data":{"DEPARTURES_PERFORMED":{"__ndarray__":"AAAAwHWOZEEAAACAwxpmQQAAACA6uWZBAAAAIPvHZ0EAAAAA88tqQQAAAMB5hG1BAAAAQNJ0cUEAAADAPglxQQAAAGA76XJB","dtype":"float64","shape":[9]},"Name":["Delta Air Lines Inc.","Delta Air Lines Inc.","Delta Air Lines Inc.","Delta Air Lines Inc.","Delta Air Lines Inc.","Delta Air Lines Inc.","Delta Air Lines Inc.","Delta Air Lines Inc.","Delta Air Lines Inc."],"Year":[2010,2011,2012,2013,2014,2015,2016,2017,2018]},"selected":{"id":"2654","type":"Selection"},"selection_policy":{"id":"2691","type":"UnionRenderers"}},"id":"2653","type":"ColumnDataSource"},{"attributes":{"source":{"id":"2672","type":"ColumnDataSource"}},"id":"2679","type":"CDSView"},{"attributes":{},"id":"2731","type":"UnionRenderers"},{"attributes":{"overlay":{"id":"2633","type":"BoxAnnotation"}},"id":"2607","type":"BoxZoomTool"},{"attributes":{"line_color":"#5AB9EA","line_width":2,"x":{"field":"Year"},"y":{"field":"DEPARTURES_PERFORMED"}},"id":"2656","type":"Line"},{"attributes":{"line_alpha":0.1,"line_color":"#5AB9EA","line_width":2,"x":{"field":"Year"},"y":{"field":"DEPARTURES_PERFORMED"}},"id":"2657","type":"Line"},{"attributes":{"callback":null,"data":{"DEPARTURES_PERFORMED":{"__ndarray__":"AAAAoIOpYEEAAACg4edgQQAAAGArlmlBAAAAoDF+aEEAAACAmWtqQQAAACBAZmxBAAAAIMgcbkEAAADgO9VtQQAAAGBZzW9B","dtype":"float64","shape":[9]},"Name":["United Air Lines Inc.","United Air Lines Inc.","United Air Lines Inc.","United Air Lines Inc.","United Air Lines Inc.","United Air Lines Inc.","United Air Lines Inc.","United Air Lines Inc.","United Air Lines Inc."],"Year":[2010,2011,2012,2013,2014,2015,2016,2017,2018]},"selected":{"id":"2694","type":"Selection"},"selection_policy":{"id":"2731","type":"UnionRenderers"}},"id":"2693","type":"ColumnDataSource"},{"attributes":{},"id":"2619","type":"BasicTickFormatter"},{"attributes":{},"id":"2595","type":"BasicTicker"},{"attributes":{"grid_line_color":null,"ticker":{"id":"2595","type":"BasicTicker"}},"id":"2598","type":"Grid"},{"attributes":{"line_alpha":0.2,"line_color":"#5AB9EA","line_width":2,"x":{"field":"Year"},"y":{"field":"DEPARTURES_PERFORMED"}},"id":"2658","type":"Line"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"2580","type":"HoverTool"},{"id":"2604","type":"SaveTool"},{"id":"2605","type":"PanTool"},{"id":"2606","type":"WheelZoomTool"},{"id":"2607","type":"BoxZoomTool"},{"id":"2608","type":"ResetTool"}]},"id":"2609","type":"Toolbar"},{"attributes":{},"id":"2604","type":"SaveTool"},{"attributes":{},"id":"2694","type":"Selection"}],"root_ids":["2585"]},"title":"Bokeh Application","version":"1.4.0"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('3020').textContent;
+                  var render_items = [{"docid":"e4097a3c-9d96-4731-926b-d3d54bb7025a","roots":{"2585":"45d786d2-ab81-4361-9bbf-af2d2ebceba6"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>
