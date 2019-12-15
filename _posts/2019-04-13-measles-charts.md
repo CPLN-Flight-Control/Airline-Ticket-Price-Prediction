@@ -14,7 +14,9 @@ toc_sticky: true
 
 ## Departures by Destination State
 
+<div class="fullwidth">
 <div id="holoviews-Departures-Dest-State"></div>
+</div>
 
 ## Departures by Origin State
 
