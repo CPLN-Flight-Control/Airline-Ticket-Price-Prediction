@@ -5,7 +5,7 @@ published: true
 tags: [dataviz, altair, hvplot, holoviews]
 excerpt: "Embedding interactive charts on static pages using Jekyll."
 folium-loader:
-  folium-chart-1: ["charts/foliumChart.html", "400"]
+  folium-chart-1: ["charts/ODvolume.html", "400"]
 toc: true
 toc_sticky: true
 ---
