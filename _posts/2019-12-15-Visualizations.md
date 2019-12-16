@@ -11,6 +11,7 @@ hv-loader:
   holoviews-Departures-Dest-State2: "charts/Departure_DestState.html"
   holoviews-Departures-Origin-State2: "charts/Departure_OriginState.html"
   holoviews-Top-Carriers: "charts/Top5carrier_byyear.html"
+  holoviews-Scatter-Plot: "charts/price_dist_plot.html"
 toc: true
 toc_sticky: true
 ---
@@ -58,4 +59,13 @@ Made using folium
 Volumes map
 
 <div id="folium-OD"></div>
+
+## One Model Input Variable
+
+Ticket price as a function of flight distance
+
+<div id="holoviews-Scatter-Plot"></div>
+
+
+
 
