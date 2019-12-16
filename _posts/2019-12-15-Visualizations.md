@@ -8,14 +8,14 @@ folium-loader:
 hv-loader:
   holoviews-Total-Airfare: "charts/totalprice_byyear.html"
   holoviews-Total-Frequencies: "charts/Total_frequencies_byyear.html"
-  holoviews-Departures-Dest-State: "charts/Departure_DestState.html"
+  holoviews-Departures-Dest-State2: "charts/Departure_DestState.html"
   holoviews-Departures-Origin-State: "charts/Departure_OriginState.html"
   holoviews-Top-Carriers: "charts/Top5carrier_byyear.html"
 toc: true
 toc_sticky: true
 ---
 
-1
+2
 
 ## Total Airfare
 
@@ -33,7 +33,7 @@ Made using altair
 
 Made using hvplot
 
-<div id="holoviews-Departures-Dest-State"></div> 
+<div id="holoviews-Departures-Dest-State2"></div> 
 
 ## Departures by Origin State
 
