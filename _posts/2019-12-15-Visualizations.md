@@ -54,10 +54,11 @@ Each of the top 10 destination airports are major hubs.
 ![Top 10 Destination Airports 2]({{ site.url }}/images/top10dest.png)
 ![Top 10 Destination Airports 3](./images/top10dest.png)
 ![Top 10 Destination Airports 4](/images/top10dest.png)
+![Top 10 Destination Airports 5](https://imgur.com/CpARaPB)
 
 ## Flights by Top 5 Carriers
 
-Delta began and ended the decade as the airline operating the greatest number of flights.
+Delta began and ended the decade as the airline operating the greatest number of flights. Note that the sudden increase in American Airlines flight volumes in 2014 coincides with the airline's merger with US Airways.
 
 <div id="holoviews-Top-Carriers"></div>
 
