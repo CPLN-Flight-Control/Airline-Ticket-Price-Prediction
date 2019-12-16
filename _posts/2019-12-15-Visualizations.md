@@ -13,13 +13,10 @@ hv-loader:
   holoviews-Top-Carriers: "charts/Top5carrier_byyear.html"
   holoviews-Scatter-Plot: "charts/price_dist_plot.html"
   holoviews-percent-errors1: "charts/Prediction_pcterror_byOD(Unit_Price).html"
-  holoviews-percent-errors0: "charts/Prediction_pcterror_byOD3.html"
   holoviews-price-error: "charts/pcterror_byyear.html"
 toc: true
 toc_sticky: true
 ---
-
-2
 
 ## Total Airfare
 
@@ -71,7 +68,9 @@ This scatterplot shows the relationship between Ticket Price, our dependent vari
 
 <div id="holoviews-Scatter-Plot"></div>
 
-## Correlation Matrix for the Linear Model
+## Correlation Matrix for the Model
+
+Below is the correlation matrix for the continuous variables in our model. Other than fuel price and GDP, our explanatory variables did not have much collinearity.
 
 ![Correlation Matrix]({{"/charts/correlation.png" | absolute_url}})
 
@@ -79,11 +78,12 @@ This scatterplot shows the relationship between Ticket Price, our dependent vari
 
 The widget below allows you to explore the outputs and errors from our model across specific OD pairs and years.
 
+Note that we struggled to embed this properly, but it can be viewed as a standalone file by downloading [this link](https://github.com/CPLN-Flight-Control/Airline-Ticket-Price-Prediction/raw/master/charts/Prediction_pcterror_byOD(Unit_Price).html).
+
 <div id="holoviews-percent-errors1"></div>
-<div id="holoviews-percent-errors0"></div>
 
 ## Percent Error by Price
 
-Our model had huge errors and needs additional tuning. It performed especially poorly on lower cost tickets.
+Our model had large errors and needs additional tuning. It performed especially poorly on lower cost tickets.
 
 <div id="holoviews-price-error"></div>
