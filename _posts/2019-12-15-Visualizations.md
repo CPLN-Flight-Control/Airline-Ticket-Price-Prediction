@@ -11,6 +11,8 @@ hv-loader:
   holoviews-Departures-Dest-State: "charts/Departure_DestState.html"
   holoviews-Departures-Origin-State: "charts/Departure_OriginState.html"
   holoviews-Top-Carriers: "charts/Top5carrier_byyear.html"
+altair-loader:
+  
 toc: true
 toc_sticky: true
 ---
