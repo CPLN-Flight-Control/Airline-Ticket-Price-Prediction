@@ -19,17 +19,19 @@ toc: true
 toc_sticky: true
 ---
 
-3
+1
 
 ## Total Airfare
 
-Made using altair
+Unsurprisingly, the total money spent on airfare rose steadily over time. Growth was stagnant, however, from 2014 to 2017.
 
 <div id="holoviews-Total-Airfare"></div> 
 
 ## Total Frequencies by Year
 
-Made using altair
+In terms of flight volumes, the most popular times to fly during the year are early summer and the winter holiday season. January through March are the slowest times of year.
+
+Flight volumes have risen steadily over the study period, but unlike total receipts from airfare, growth continued between 2014 and 2017.
 
 <div id="holoviews-Total-Frequencies"></div> 
 
