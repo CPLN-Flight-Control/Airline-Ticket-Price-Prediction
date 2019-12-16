@@ -42,7 +42,7 @@ Made using hvplot
 
 Made using seaborn
 
-<img src="charts/top10dest.png"/>
+<img src="charts/top10dest.png?raw=true"/>
 
 ## OD Volumes
 
