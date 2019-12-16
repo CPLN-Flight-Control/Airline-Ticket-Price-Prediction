@@ -18,7 +18,7 @@ toc: true
 toc_sticky: true
 ---
 
-3
+9
 
 ## Total Airfare
 
@@ -55,6 +55,7 @@ Each of the top 10 destination airports are major hubs.
 ![Top 10 Destination Airports 3](./images/top10dest.png)
 ![Top 10 Destination Airports 4](/images/top10dest.png)
 ![Top 10 Destination Airports 5](https://imgur.com/CpARaPB)
+![distances-abandoned-cars]({{ site.url }}{{ site.baseurl }}/assets/images/top10dest.png)
 
 ## Flights by Top 5 Carriers
 
