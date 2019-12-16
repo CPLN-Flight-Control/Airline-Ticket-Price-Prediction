@@ -80,6 +80,7 @@ This scatterplot shows the relationship between Ticket Price, our dependent vari
 The widget below allows you to explore the outputs and errors from our model across specific OD pairs and years.
 
 <div id="holoviews-percent-errors1"></div>
+<div id="holoviews-percent-errors0"></div>
 
 ## Percent Error by Price
 
