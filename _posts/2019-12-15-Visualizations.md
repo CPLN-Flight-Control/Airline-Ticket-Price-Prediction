@@ -12,7 +12,7 @@ hv-loader:
   holoviews-Departures-Origin-State2: "charts/Departure_OriginState.html"
   holoviews-Top-Carriers: "charts/Top5carrier_byyear.html"
   holoviews-Scatter-Plot: "charts/price_dist_plot.html"
-  holoviews-percent-errors: "charts/Prediction_pcterror_byOD.html"
+  holoviews-percent-errors1: "charts/Prediction_pcterror_byOD.html"
   holoviews-price-error: "charts/pcterror_byyear.html"
 toc: true
 toc_sticky: true
@@ -81,7 +81,7 @@ This scatterplot shows the relationship between Ticket Price, our dependent vari
 
 The widget below allows you to explore the outputs and errors from our model across specific OD pairs and years.
 
-<div id="holoviews-percent-errors"></div>
+<div id="holoviews-percent-errors1"></div>
 
 ## Percent Error by Price
 
