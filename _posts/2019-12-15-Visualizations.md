@@ -37,13 +37,13 @@ Flight volumes have risen steadily over the study period, but unlike total recei
 
 ## Departures by Destination State
 
-Made using hvplot
+The vast majority of flights are concentrated in a minority of states.
 
 <div id="holoviews-Departures-Dest-State2"></div> 
 
 ## Departures by Origin State
 
-Made using hvplot
+Compared to the beginning of the decade, flights are spread relatively more evenly among the states (except for California).
 
 <div id="holoviews-Departures-Origin-State2"></div>
 
@@ -55,11 +55,13 @@ Made using seaborn
 
 ## Flights by Top 5 Carriers
 
+Delta began and ended the decade as the airline operating the greatest number of flights.
+
 <div id="holoviews-Top-Carriers"></div>
 
 ## OD Volumes
 
-Made using folium
+
 
 Volumes map
 
