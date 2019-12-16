@@ -49,8 +49,6 @@ Made using seaborn
 
 <div id="holoviews-Top-Carriers"></div>
 
-
-
 ## OD Volumes
 
 Made using folium
