@@ -14,6 +14,7 @@ hv-loader:
   holoviews-Scatter-Plot: "charts/price_dist_plot.html"
   holoviews-OD-errors: "charts/errorsbyOD.html"
   holoviews-percent-errors: "charts/Prediction_pcterror_byOD.html"
+  holoviews-price-error: "charts/pcterror_byyear.html"
 toc: true
 toc_sticky: true
 ---
@@ -80,5 +81,6 @@ Ticket price as a function of flight distance
 
 <div id="holoviews-percent-errors"></div>
 
+## Percent Error by Price
 
-
+<div id="holoviews-price-error"></div>
