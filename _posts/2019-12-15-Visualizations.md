@@ -53,6 +53,7 @@ Made using seaborn
 
 ![Top 10 Destination Airports]({{"/charts/top10dest.png" | absolute_url}})
 ![Top 10 Destination Airports 2]({{ site.url }}/images/top10dest.png)
+![Top 10 Destination Airports 3](./images/top10dest.png)
 
 ## Flights by Top 5 Carriers
 
