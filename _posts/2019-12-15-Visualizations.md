@@ -12,14 +12,13 @@ hv-loader:
   holoviews-Departures-Origin-State2: "charts/Departure_OriginState.html"
   holoviews-Top-Carriers: "charts/Top5carrier_byyear.html"
   holoviews-Scatter-Plot: "charts/price_dist_plot.html"
-  holoviews-OD-errors: "charts/errorsbyOD.html"
-  holoviews-percent-errors: "charts/Prediction_pcterror_byOD.html"
+  holoviews-percent-errors2: "charts/Prediction_pcterror_byOD.html"
   holoviews-price-error: "charts/pcterror_byyear.html"
 toc: true
 toc_sticky: true
 ---
 
-2
+3
 
 ## Total Airfare
 
@@ -54,6 +53,7 @@ Each of the top 10 destination airports are major hubs.
 ![Top 10 Destination Airports]({{"/charts/top10dest.png" | absolute_url}})
 ![Top 10 Destination Airports 2]({{ site.url }}/images/top10dest.png)
 ![Top 10 Destination Airports 3](./images/top10dest.png)
+![Top 10 Destination Airports 4](images/top10dest.png)
 
 ## Flights by Top 5 Carriers
 
@@ -81,7 +81,7 @@ This scatterplot shows the relationship between Ticket Price, our dependent vari
 
 The widget below allows you to explore the outputs and errors from our model across specific OD pairs and years.
 
-<div id="holoviews-percent-errors"></div>
+<div id="holoviews-percent-errors2"></div>
 
 ## Percent Error by Price
 
