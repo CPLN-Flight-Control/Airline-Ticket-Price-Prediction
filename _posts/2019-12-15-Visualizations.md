@@ -77,14 +77,14 @@ This scatterplot shows the relationship between Ticket Price, our dependent vari
 
 ![Correlation Matrix]({{"/charts/correlation.png" | absolute_url}})
 
-## Errors for Final Model
+## Final Model Prediction Explorer
 
-<div id="holoviews-OD-errors"></div>
-
-## Percent Errors
+The widget below allows you to explore the outputs and errors from our model across specific OD pairs and years.
 
 <div id="holoviews-percent-errors"></div>
 
 ## Percent Error by Price
+
+Our model had huge errors and needs additional tuning. It performed especially poorly on lower cost tickets.
 
 <div id="holoviews-price-error"></div>
