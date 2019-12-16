@@ -13,6 +13,7 @@ hv-loader:
   holoviews-Top-Carriers: "charts/Top5carrier_byyear.html"
   holoviews-Scatter-Plot: "charts/price_dist_plot.html"
   holoviews-percent-errors1: "charts/Prediction_pcterror_byOD(Unit_Price).html"
+  holoviews-percent-errors0: "charts/Prediction_pcterror_byOD.html"
   holoviews-price-error: "charts/pcterror_byyear.html"
 toc: true
 toc_sticky: true
