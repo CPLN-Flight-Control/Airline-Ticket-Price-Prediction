@@ -10,19 +10,20 @@ hv-loader:
   holoviews-Total-Frequencies: "charts/Total_frequencies_byyear.html"
   holoviews-Departures-Dest-State: "charts/Departure_DestState.html"
   holoviews-Departures-Origin-State: "charts/Departure_OriginState.html"
+  holoviews-Top-Carriers: "charts/Top5carrier_byyear.html"
 toc: true
 toc_sticky: true
 ---
 
 ## Total Airfare
 
-Made using hvplot
+Made using altair
 
 <div id="holoviews-Total-Airfare"></div> 
 
 ## Total Frequencies by Year
 
-Made using hvplot
+Made using altair
 
 <div id="holoviews-Total-Frequencies"></div> 
 
@@ -43,6 +44,11 @@ Made using hvplot
 Made using seaborn
 
 ![Top 10 Destination Airports]({{"/charts/top10dest.png" | absolute_url}})
+
+## Flights by Top 5 Carriers
+
+<div id="holoviews-Top-Carriers"></div>
+
 
 
 ## OD Volumes
