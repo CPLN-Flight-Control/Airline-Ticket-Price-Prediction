@@ -12,6 +12,8 @@ hv-loader:
   holoviews-Departures-Origin-State2: "charts/Departure_OriginState.html"
   holoviews-Top-Carriers: "charts/Top5carrier_byyear.html"
   holoviews-Scatter-Plot: "charts/price_dist_plot.html"
+  holoviews-OD-errors: "charts/errorsbyOD.html"
+  holoviews-percent-errors: "charts/Prediction_pcterror_byOD.html"
 toc: true
 toc_sticky: true
 ---
@@ -70,6 +72,13 @@ Ticket price as a function of flight distance
 
 ![Correlation Matrix]({{"/charts/correlation.png" | absolute_url}})
 
+## Errors for Final Model
+
+<div id="holoviews-OD-errors"></div>
+
+## Percent Errors
+
+<div id="holoviews-percent-errors"></div>
 
 
 
