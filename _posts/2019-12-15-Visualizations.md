@@ -42,7 +42,7 @@ Made using hvplot
 
 Made using seaborn
 
-![top-airports]({{ site.url }}{{ site.baseurl }}/charts/top10dest.png)
+<img src="charts/top10dest.png"/>
 
 ## OD Volumes
 
