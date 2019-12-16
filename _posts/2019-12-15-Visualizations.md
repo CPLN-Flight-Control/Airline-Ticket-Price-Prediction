@@ -16,7 +16,7 @@ toc: true
 toc_sticky: true
 ---
 
-2
+3
 
 ## Total Airfare
 
@@ -60,11 +60,15 @@ Volumes map
 
 <div id="folium-OD"></div>
 
-## One Model Input Variable
+## One Input Variable for our Model
 
 Ticket price as a function of flight distance
 
 <div id="holoviews-Scatter-Plot"></div>
+
+## Correlation Matrix for the Linear Model
+
+![Correlation Matrix]({{"/charts/correlation.png" | absolute_url}})
 
 
 
