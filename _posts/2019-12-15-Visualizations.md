@@ -16,21 +16,37 @@ toc_sticky: true
 
 ## Total Airfare
 
+Made using hvplot
+
 <div id="holoviews-Total-Airfare"></div> 
 
 ## Total Frequencies by Year
+
+Made using hvplot
 
 <div id="holoviews-Total-Frequencies"></div> 
 
 ## Departures by Destination State
 
+Made using hvplot
+
 <div id="holoviews-Departures-Dest-State"></div> 
 
 ## Departures by Origin State
 
+Made using hvplot
+
 <div id="holoviews-Departures-Origin-State"></div>
 
+## Top 10 Destination Airports
+
+Made using seaborn
+
+![top-airports]({{ site.url }}{{ site.baseurl }}/charts/top10dest.png)
+
 ## OD Volumes
+
+Made using folium
 
 Volumes map
 
