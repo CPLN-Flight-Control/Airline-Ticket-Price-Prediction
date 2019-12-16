@@ -19,7 +19,7 @@ toc: true
 toc_sticky: true
 ---
 
-1
+2
 
 ## Total Airfare
 
@@ -67,7 +67,7 @@ Explore the flight volumes between Origin and Destination pairs with the map bel
 
 <div id="folium-OD"></div>
 
-## Ticket Price vs. Flight Distance.
+## Ticket Price vs. Flight Distance
 
 This scatterplot shows the relationship between Ticket Price, our dependent variable, and Flight Distance, one of the independent variables in our model.
 
