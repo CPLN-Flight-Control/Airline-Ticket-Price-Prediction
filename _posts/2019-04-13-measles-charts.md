@@ -1,5 +1,5 @@
 ---
-title: "Origin and Destination Volume"
+title: "Visualizations"
 date: 2019-12-15
 published: true
 excerpt: "Embedding interactive charts on static pages using Jekyll."
