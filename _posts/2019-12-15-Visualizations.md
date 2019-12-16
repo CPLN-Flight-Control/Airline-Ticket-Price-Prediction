@@ -6,14 +6,23 @@ excerpt: "Embedding interactive charts on static pages using Jekyll."
 folium-loader:
   folium-OD: ["charts/ODvolume.html", "400"]
 hv-loader:
+  holoviews-Total-Airfare: "charts/totalprice_byyear.html"
+  holoviews-Total-Frequencies: "charts/Total_frequencies_byyear.html"
   holoviews-Departures-Dest-State: "charts/Departure_DestState.html"
   holoviews-Departures-Origin-State: "charts/Departure_OriginState.html"
 toc: true
 toc_sticky: true
 ---
 
-## Departures by Destination State
+## Total Airfare
 
+<div id="holoviews-Total-Airfare"></div> 
+
+## Total Frequencies by Year
+
+<div id="holoviews-Total-Frequencies"></div> 
+
+## Departures by Destination State
 
 <div id="holoviews-Departures-Dest-State"></div> 
 
