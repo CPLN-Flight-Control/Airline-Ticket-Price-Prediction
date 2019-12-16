@@ -49,7 +49,7 @@ Compared to the beginning of the decade, flights are spread relatively more even
 
 ## Top 10 Destination Airports
 
-Made using seaborn
+Each of the top 10 destination airports are major hubs.
 
 ![Top 10 Destination Airports]({{"/charts/top10dest.png" | absolute_url}})
 ![Top 10 Destination Airports 2]({{ site.url }}/images/top10dest.png)
@@ -63,15 +63,13 @@ Delta began and ended the decade as the airline operating the greatest number of
 
 ## OD Volumes
 
-
-
-Volumes map
+Explore the flight volumes between Origin and Destination pairs with the map below.
 
 <div id="folium-OD"></div>
 
-## One Input Variable for our Model
+## Ticket Price vs. Flight Distance.
 
-Ticket price as a function of flight distance
+This scatterplot shows the relationship between Ticket Price, our dependent variable, and Flight Distance, one of the independent variables in our model.
 
 <div id="holoviews-Scatter-Plot"></div>
 
